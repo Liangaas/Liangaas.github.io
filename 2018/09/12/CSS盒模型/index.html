@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="在日常编码的过程中，发现有时候使用 123&amp;lt;input type = &amp;quot;submit&amp;quot;&amp;gt;&amp;lt;input type = &amp;quot;button&amp;quot;&amp;gt;&amp;lt;button&amp;gt;&amp;lt;/button&amp;gt; 查了一下资料，来做一个小结">
+<meta name="description" content="CSS盒模型 CSS盒模型总类：inline,inline-block,block,table,absolute position,float。  浏览器把每个元素都看作一个盒模型  盒模型有几个属性决定：display,position,float,width,height,margin,padding,border">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于 “button”">
-<meta property="og:url" content="http://yoursite.com/2018/08/08/button不同的构建/index.html">
+<meta property="og:title" content="CSS盒模型">
+<meta property="og:url" content="http://yoursite.com/2018/09/12/CSS盒模型/index.html">
 <meta property="og:site_name" content="Liangaa">
-<meta property="og:description" content="在日常编码的过程中，发现有时候使用 123&amp;lt;input type = &amp;quot;submit&amp;quot;&amp;gt;&amp;lt;input type = &amp;quot;button&amp;quot;&amp;gt;&amp;lt;button&amp;gt;&amp;lt;/button&amp;gt; 查了一下资料，来做一个小结">
+<meta property="og:description" content="CSS盒模型 CSS盒模型总类：inline,inline-block,block,table,absolute position,float。  浏览器把每个元素都看作一个盒模型  盒模型有几个属性决定：display,position,float,width,height,margin,padding,border">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-12T04:17:40.918Z">
+<meta property="og:updated_time" content="2018-09-12T04:18:45.722Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于 “button”">
-<meta name="twitter:description" content="在日常编码的过程中，发现有时候使用 123&amp;lt;input type = &amp;quot;submit&amp;quot;&amp;gt;&amp;lt;input type = &amp;quot;button&amp;quot;&amp;gt;&amp;lt;button&amp;gt;&amp;lt;/button&amp;gt; 查了一下资料，来做一个小结">
+<meta name="twitter:title" content="CSS盒模型">
+<meta name="twitter:description" content="CSS盒模型 CSS盒模型总类：inline,inline-block,block,table,absolute position,float。  浏览器把每个元素都看作一个盒模型  盒模型有几个属性决定：display,position,float,width,height,margin,padding,border">
 
 
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/08/button不同的构建/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/12/CSS盒模型/"/>
 
 
 
 
 
-  <title>关于 “button” | Liangaa</title>
+  <title>CSS盒模型 | Liangaa</title>
   
 
 
@@ -234,7 +234,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/08/button不同的构建/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/12/CSS盒模型/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liangaa">
@@ -251,7 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">关于 “button”</h1>
+          <h1 class="post-title" itemprop="name headline">CSS盒模型</h1>
         
 
         <div class="post-meta">
@@ -263,8 +263,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-08T20:29:27+08:00">
-                2018-08-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-12T12:18:00+08:00">
+                2018-09-12
               </time>
             
 
@@ -323,15 +323,77 @@
       
 
       
-        <p>在日常编码的过程中，发现有时候使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type = &quot;submit&quot;&gt;</span><br><span class="line">&lt;input type = &quot;button&quot;&gt;</span><br><span class="line">&lt;button&gt;&lt;/button&gt;</span><br></pre></td></tr></table></figure>
-<p>查了一下资料，来做一个小结<br><a id="more"></a></p>
-<ol>
-<li><code>&lt;input type = &quot;submit&quot;&gt;</code>  当用户点击时，会自动提交表单。</li>
-<li><code>&lt;input type = &quot;button&quot;&gt;</code>  显示是一个按钮，但是如何没有js的处理，按下去是没有行为的。</li>
-<li><code>&lt;button&gt;&lt;/button&gt;</code>  button元素可能包含内容，文本或图像等内容。还有一些旧版本的浏览器的兼容问题。注意：始终规定type的属性，不同浏览器默认的type属性不一样，Internet Explorer 的默认类型是 “button”，而其他浏览器中（包括 W3C 规范）的默认值是 “submit”。</li>
-<li>还有可以用其他标签加上样式，点击事件等伪装成一个按钮。</li>
-</ol>
+        <h2 id="CSS盒模型"><a href="#CSS盒模型" class="headerlink" title="CSS盒模型"></a>CSS盒模型</h2><ul>
+<li><p>CSS盒模型总类：inline,inline-block,block,table,absolute position,float。</p>
+</li>
+<li><p>浏览器把每个元素都看作一个盒模型</p>
+</li>
+<li><p>盒模型有几个属性决定：display,position,float,width,height,margin,padding,border</p>
+<a id="more"></a>
+</li>
+<li><p>W3C  标准盒模型</p>
+<ul>
+<li><p>外盒尺寸计算（元素空间尺寸）</p>
+<p>element 空间宽度= 内容宽度(width) + 内边距(padding) + 边框(border) + 外边距(margin)</p>
+<p>element 空间高度= 内容高度(height) + 内边距(padding) + 边框(border) + 外边距(margin)</p>
+</li>
+<li><p>内盒尺寸计算（元素大小)</p>
+<p>element 宽度 = 内容宽度(width) + 内边距(padding) + 边框(border)</p>
+<p>element 高度= 内容高度(height) + 内边距(padding) + 边框(border)</p>
+</li>
+</ul>
+</li>
+<li><p>IE传统下盒模型（IE6以下，不包括IE6版本或QuirksMode 下的IE5.5+）</p>
+<ul>
+<li><p>外盒尺寸计算（元素空间尺寸）</p>
+<p>element 空间宽度= 【内容宽度 + 内边距(padding) + 边框(border)】(width)+ 外边距(margin)</p>
+<p>element 空间高度= 【内容高度 + 内边距(padding) + 边框(border)】(height) + 外边距(margin)</p>
+</li>
+<li><p>内盒尺寸计算（元素大小)</p>
+<p>element 宽度 =【内容宽度+ 内边距(padding) + 边框(border)】(width) </p>
+<p>element 高度= 【内容高度+ 内边距(padding) + 边框(border)】(height) </p>
+</li>
+</ul>
+</li>
+<li><p>为了解决盒模型问题，CSS3增加了一个盒模型属性box-sizing</p>
+</li>
+<li>box-sizing:content-box （W3C  标准盒模型） | border-box （IE传统下盒模型） | inherit （继承父元素的盒模型属性）</li>
+<li>前面所诉，浏览器把每个元素都看作一个盒模型。在样式中制定了盒子的宽度与高度，就有可能出现盒子容纳不下的情，此时就使用overflow属性来指定如歌娴熟盒中容纳不下的内容。</li>
+<li>overflow是CSS2.1规范中的特性，CSS3中增加了overflow-x和overflow-y属性</li>
+<li>overflow-x，overflow-y和overflow的属性参数一样<ul>
+<li>visible 不剪切，不增加滚动条</li>
+<li>auto 内容超过容器，隐藏溢出内容，增加滚动条用于拖动查看隐藏内容</li>
+<li>hidden 溢出隐藏，不增加滚动条</li>
+<li>scroll 不管内容是否溢出,都增加滚动条</li>
+<li>no-display 溢出不显示元素，类似元素添加了display:none</li>
+<li>no-content 当内容溢出容易不显示内容，类似天际了visibility:hidden</li>
+</ul>
+</li>
+<li>CSS3 自由缩放属性 resize ：允许用于通过拖动的方式来修改元素的尺寸来改变元素的大小<ul>
+<li>none ：用户不能拖放元素修改大小</li>
+<li>both:用户可以拖动元素，同时修改元素的宽度和高度</li>
+<li>horizontal：用户可以拖动元素，仅仅可以修改元素的宽度，但是不能修改元素的高度</li>
+<li>vertical：用户可以拖动元素，仅仅可以修改元素的高度，但是不能修改元素的宽度</li>
+<li>inherit：继承父元素的resize属性值</li>
+</ul>
+</li>
+<li>CSS3外轮廓属性  outline:用来在元素周围画一条轮廓线，起到突出元素的作用<ul>
+<li>outline-color</li>
+<li>outline-style</li>
+<li>outline-offset</li>
+<li>outline-width</li>
+<li>inherit</li>
+<li>outline VS border<ul>
+<li>border属性属于盒模型的一部分，直接影响元素盒子的大小，而outline创建的外轮廓线是画在一个框的上面，不会影响该框或者任何框的大小，outline不会影响文档流，也不会破坏网页布局</li>
+<li>outline创建的外轮廓线在元素的各边都一样，不能像border一样设置outline-top或者outline-left..</li>
+<li>border 创建的边框可以单边设置，而outline创建的外轮廓线始终是闭合的</li>
+<li>outline创建的外轮廓线可能是非矩形的，如果元素是多行，外轮廓线就是至少是能够包含该元素的所有框的外轮廓线，border是用一个边框包括整个元素。</li>
+<li>border仅可以设置元素的边框，只能向外扩展。而outline创建的外轮廓线，可以通过outline-offset的值，向元素外部(outline-offset为正值)或者向元素内部(outline-offset为负值)创建轮廓线。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -356,15 +418,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/08/14/搭建博客一日游/" rel="next" title="搭建博客一日游">
+                <i class="fa fa-chevron-left"></i> 搭建博客一日游
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/08/css选择器/" rel="prev" title="css选择器">
-                css选择器 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -416,8 +478,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -475,6 +546,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS盒模型"><span class="nav-number">1.</span> <span class="nav-text">CSS盒模型</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
